@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+  color: var(--color);
+  outline: none;
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+
+.mode-btn {
+  display: inline-flex;
+  background: var(--themecolor);
+  padding: 10px 20px 10px 10px;
+  position: fixed;
+  top: 100px;
+  left: 0;
+  border-radius: 0 30px 30px 0;
+  z-index: 1000;
+}
+
+.mode-icon {
+  color: #fff;
+  font-size: 20px;
+  display: inline-flex;
+}
+
+.btn-theme-color {
+  background-color: var(--themecolor);
+  color: #fff;
+}
+.btn-theme-color:hover {
+  background-color: var(--themecolor-hover);
+  color: #fff;
+}
+.btn-check:checked+.btn:focus-visible,
+.btn.active:focus-visible,
+.btn.show:focus-visible,
+:not(.btn-check)+.btn:active:focus-visible,
+.btn-check:checked+.btn,
+.btn.active,
+:not(.btn-check)+.btn:active,
+.btn:focus-visible{
+  background-color: var(--themecolor-hover) ;
+}
+.btn{
+  border: none;
+}
+
+
+[data-bs-theme=light] {
+  --themecolor: #ff9b00;
+  --themecolor-hover: #ff6c00;
+  --background: #ffffff;
+  --box_background: #f7f7f7;
+}
+
+[data-bs-theme=dark] {
+  --themecolor: #ff9b00;
+  --themecolor-hover: #ff6c00;
+  --color: #ffffff;
+  --background: #333638;
+  --box_background: #333638;
+}
+
+
