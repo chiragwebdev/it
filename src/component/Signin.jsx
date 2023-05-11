@@ -3,7 +3,8 @@ import './sign.css'
 import { useDispatch, useSelector } from 'react-redux';
 import { hideshowicon } from '../redux/menuslice';
 import { BiShow, BiHide } from "react-icons/bi";
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { FaGoogle, FaFacebookF, FaTwitter } from "react-icons/fa";
 
 
 function Signin() {
@@ -18,11 +19,11 @@ function Signin() {
 
   const submitform = (e) => {
     e.preventDefault();
-      setFormdata({
-        email: "",
-        password: "",
-      });
-      navigate('/')
+    setFormdata({
+      email: "",
+      password: "",
+    });
+    navigate('/')
   }
 
   const onchanghandel = (e) => {
@@ -36,7 +37,7 @@ function Signin() {
       <div className="container signinpage">
         <div className="signin">
           <form action="" onSubmit={submitform}>
-            <h2 className='signin-title'>Sign In</h2>
+            <h2 className='signin-title section-title'>Welcome Back</h2>
             <div className='mb-3'>
               <p className='label'>Email</p>
               <input name='email' type="email" className='input-box form-control' required value={formdata.email} onChange={(e) => { onchanghandel(e) }} />
@@ -47,14 +48,28 @@ function Signin() {
                 <input name="password" type={typeinput ? "text" : "password"} className='password-field' required value={formdata.password} onChange={(e) => { onchanghandel(e) }} />
                 {
                   typeinput ?
-                    <BiShow onClick={() => dispatch(hideshowicon())} className='cursor-point' /> :
-                    <BiHide onClick={() => dispatch(hideshowicon())} className='cursor-point' />
+                    <BiHide onClick={() => dispatch(hideshowicon())} className='cursor-point' /> :
+                    <BiShow onClick={() => dispatch(hideshowicon())} className='cursor-point' />
                 }
                 <p className='pass-error'>{passworderror}</p>
               </div>
             </div>
-            <input type="submit" value="Sign In" className='btn btn-theme-color submit' />
+            <input type="submit" value="Sign In" className='btn btn-theme-color submit mb-4' />
           </form>
+          <p className='text-center mb-2'><Link to="/signin" className='signin-a-hover'>Forgot Password?</Link></p>
+          <p className='text-center'>Don't have an account? <Link to="/signin" className='signin-a-hover'>Sign Up</Link></p>
+          <div class="divider-icon my-4">or</div>
+          <ul className='social-row'>
+            <li className=''>
+              <Link className='social-icon-li page-btn-hover'><FaGoogle /></Link>
+            </li>
+            <li className=''>
+              <Link className='social-icon-li page-btn-hover'><FaFacebookF /></Link>
+            </li>
+            <li className=''>
+              <Link className='social-icon-li page-btn-hover'><FaTwitter /></Link>
+            </li>
+          </ul>
         </div>
       </div>
     </>

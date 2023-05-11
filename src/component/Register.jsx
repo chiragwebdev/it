@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import './sign.css'
 import { BiShow, BiHide } from "react-icons/bi";
-import { useNavigate } from 'react-router-dom';
+import { FaGoogle, FaFacebookF, FaTwitter } from "react-icons/fa";
+import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { hideshowicon, senddata } from '../redux/menuslice';
 
@@ -12,6 +13,7 @@ function Register() {
     const { typeinput } = useSelector((state) => state.menuslice)
     const [passworderror, setePassworderror] = useState("")
     const [formdata, setFormdata] = useState({
+        name: "",
         email: "",
         password: "",
         repassword: "",
@@ -20,16 +22,17 @@ function Register() {
     const submitform = (e) => {
         e.preventDefault();
         if (formdata.password === formdata.repassword) {
-            localStorage.setItem("email", formdata.email);
-            localStorage.setItem("password", formdata.password);
+            // localStorage.setItem("email", formdata.email);
+            // localStorage.setItem("password", formdata.password);
             setePassworderror("")
             setFormdata({
+                name: "",
                 email: "",
                 password: "",
                 repassword: "",
             });
             navigate('/')
-            dispatch(senddata({...formdata}))
+            dispatch(senddata({ ...formdata }))
         } else {
             setePassworderror("password not match")
         }
@@ -44,9 +47,12 @@ function Register() {
     return (
         <div className="container signinpage">
             <div className="signin">
+                <h2 className='signin-title section-title'>Sign Up</h2>
                 <form action="" onSubmit={submitform}>
-                    <h2 className='signin-title'>Sign In</h2>
-
+                    <div className='mb-3'>
+                        <p className='label'>Name</p>
+                        <input name='name' type="text" className='input-box form-control' required value={formdata.name} onChange={(e) => { onchanghandel(e) }} />
+                    </div>
                     <div className='mb-3'>
                         <p className='label'>Email</p>
                         <input name='email' type="email" className='input-box form-control' required value={formdata.email} onChange={(e) => { onchanghandel(e) }} />
@@ -57,8 +63,8 @@ function Register() {
                             <input name="password" type={typeinput ? "text" : "password"} className='password-field' required value={formdata.password} onChange={(e) => { onchanghandel(e) }} />
                             {
                                 typeinput ?
-                                    <BiShow onClick={() => dispatch(hideshowicon())} className='cursor-point' /> :
-                                    <BiHide onClick={() => dispatch(hideshowicon())} className='cursor-point' />
+                                    <BiHide onClick={() => dispatch(hideshowicon())} className='cursor-point' /> :
+                                    <BiShow onClick={() => dispatch(hideshowicon())} className='cursor-point' />
                             }
 
                         </div>
@@ -69,14 +75,27 @@ function Register() {
                             <input name="repassword" type={typeinput ? "text" : "password"} className='password-field' required value={formdata.repassword} onChange={(e) => { onchanghandel(e) }} />
                             {
                                 typeinput ?
-                                    <BiShow onClick={() => dispatch(hideshowicon())} className='cursor-point' /> :
-                                    <BiHide onClick={() => dispatch(hideshowicon())} className='cursor-point' />
+                                    <BiHide onClick={() => dispatch(hideshowicon())} className='cursor-point' /> :
+                                    <BiShow onClick={() => dispatch(hideshowicon())} className='cursor-point' />
                             }
                         </div>
                         <p className='pass-error'>{passworderror}</p>
                     </div>
-                    <input type="submit" value="Register" className='btn btn-theme-color submit' />
+                    <input type="submit" value="Register" className='btn btn-theme-color submit mb-4' />
                 </form>
+                <p className='text-center'>Already have an account? <Link to="/signin" className='signin-a-hover'>Sign in</Link></p>
+                <div class="divider-icon my-4">or</div>
+                <ul className='social-row'>
+                    <li className=''>
+                        <Link className='social-icon-li page-btn-hover'><FaGoogle /></Link>
+                    </li>
+                    <li className=''>
+                        <Link className='social-icon-li page-btn-hover'><FaFacebookF /></Link>
+                    </li>
+                    <li className=''>
+                        <Link className='social-icon-li page-btn-hover'><FaTwitter /></Link>
+                    </li>
+                </ul>
             </div>
         </div>
     )

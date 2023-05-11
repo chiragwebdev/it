@@ -1,0 +1,47 @@
+.serach-icon {
+    width: 70px;
+    height: 100%;
+}
+
+.img-width {
+    width: 80px;
+}
+
+.card-body.text-center {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.more-btn {
+    padding: 7px 20px;
+    color: #fff;
+    border-radius: 5px;
+}
+.services-card .col-xl-3.col-md-6:nth-child(1) .more-btn,
+.services-card .col-xl-3.col-md-6:nth-child(1) .card-body:after {
+    background: rgb(255 171 66);
+}
+.services-card .col-xl-3.col-md-6:nth-child(2) .more-btn,
+.services-card .col-xl-3.col-md-6:nth-child(2) .card-body:after {
+    background: rgb(216 85 255);
+}
+.services-card .col-xl-3.col-md-6:nth-child(3) .more-btn,
+.services-card .col-xl-3.col-md-6:nth-child(3) .card-body:after {
+    background: rgb(251 77 106);
+}
+.services-card .col-xl-3.col-md-6:nth-child(4) .more-btn,
+.services-card .col-xl-3.col-md-6:nth-child(4) .card-body:after {
+    background:rgb(0 185 255);
+}
+
+.services-card .card{
+    overflow: hidden;
+}
+.services-card .card-body:after{
+    width: 15px;
+    height: 40px;
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+}

@@ -1,14 +1,16 @@
-.signin-title{
+.signin-title {
     font-weight: 700;
     margin-bottom: 12px;
 }
-.signinpage{
+
+.signinpage {
     padding-top: 100px;
     padding-bottom: 100px;
 }
+
 .signin {
-    max-width: 400px;
-    background:var(--box_background);
+    max-width: 500px;
+    background: var(--box_background);
     border-radius: 10px;
     padding: 50px 30px;
     width: 100%;
@@ -21,29 +23,116 @@
     border-radius: 5px;
     border: 1px solid #cdcdcd;
 }
-.label{
+
+.label {
     margin-bottom: 6px;
 }
+
 .form-control:active,
 .form-control:focus {
-  box-shadow: none;
+    box-shadow: none;
 }
-.submit{
+
+.submit {
     width: 100%;
     margin-top: 20px;
     border-radius: 20px;
 }
 
-.pass-error{
+.pass-error {
     font-size: 14px;
     color: red;
 }
-.password-field{
+
+.password-field {
     border: none;
     padding: 0;
     width: 100%;
     background: transparent;
 }
-.cursor-point{
+
+.cursor-point {
     cursor: pointer;
+}
+
+.signin-a-hover {
+    color: var(--themecolor);
+    font-weight: 500;
+    position: relative;
+}
+
+.signin-a-hover:after {
+    position: absolute;
+    content: "";
+    transform-origin: 100%;
+    transform: scale3d(0, 1, 10);
+    transition: transform .3s linear;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--themecolor);
+}
+
+.signin-a-hover:hover:after {
+    transform: scale3d(1, 1, 1);
+    transform-origin: 0%;
+}
+
+.divider-icon {
+    position: relative;
+    text-align: center;
+}
+
+.divider-icon:before {
+    left: 0;
+}
+
+.divider-icon:after,
+.divider-icon:before {
+    position: absolute;
+    top: 50%;
+    content: "";
+    border-top: 1px solid rgba(164, 174, 198, .2);
+    width: calc(50% - 1.5rem);
+}
+
+.divider-icon:after {
+    right: 0;
+}
+
+.social-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 10px;
+}
+.social-icon-li {
+    border-radius: 20px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+}
+.social-row li:nth-child(1) .social-icon-li{
+    background: #ff2e2e;
+}
+.social-row li:nth-child(2) .social-icon-li{
+    background:rgb(64 92 255);
+}
+.social-row li:nth-child(3) .social-icon-li{
+    background: rgb(0, 140, 255);
+}
+.social-icon-link {
+    color: rgb(255, 255, 255);
+}
+
+
+@media(max-width:576px){
+    .signin{
+        padding-left:calc( 15px + 1vw);
+        padding-right:calc( 15px + 1vw);
+    }
 }

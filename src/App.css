@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
 * {
   box-sizing: border-box;
-  color: var(--color);
+  /* color: var(--color); */
   outline: none;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -74,20 +76,40 @@ a:hover {
   border: none;
 }
 
+.section-title{
+  font-weight: 700;
+  color: var(--color);
+}
+
+.pad-tb-section {
+  padding: 50px 0;
+}
+
+.page-btn-hover:hover {
+  transform: translateY(-0.2rem);
+}
+
+.page-btn-hover {
+  transition: all 0.3s linear;
+}
+
 
 [data-bs-theme=light] {
-  --themecolor: #ff9b00;
-  --themecolor-hover: #ff6c00;
+  --themecolor:#0073b9;
+  --themecolor-hover:#055688;
   --background: #ffffff;
   --box_background: #f7f7f7;
+  --color: #000;
+  --nav_background: #ffffff;
 }
 
 [data-bs-theme=dark] {
-  --themecolor: #ff9b00;
-  --themecolor-hover: #ff6c00;
-  --color: #ffffff;
+  --themecolor: #10a1f9;
+  --themecolor-hover: #066faf;
   --background: #333638;
   --box_background: #333638;
+  --color: #ffffff;
+  --nav_background: #141516;
 }
 
 
