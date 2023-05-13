@@ -5,15 +5,53 @@
 .h1-title {
     font-size: calc(30px + 1vw);
     font-weight: 700;
-    color: var(--themecolor);
+    color: var(--titlecolor);
 }
 
 .hero-section .btn {
-    border-radius: 50px;
     padding: 12px 50px;
     font-weight: 700;
     margin-top: 20px;
 
+}
+
+/* ===========================================================
+/* =================  hero section-2  =======================
+=========================================================== */
+
+.bar {
+    height: 5px;
+    width: 120px;
+    background: #cdf1d8;
+    margin: 20px auto;
+    position: relative;
+    border-radius: 30px;
+}
+
+.bar::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -50%;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background: #44ce6f;
+    animation: bar-move 4s linear infinite;
+}
+
+@keyframes bar-move {
+    0% {
+        left: 0;
+    }
+
+    50% {
+        left: 93%;
+    }
+
+    100% {
+        left: 0;
+    }
 }
 
 .process-count {
@@ -21,45 +59,105 @@
     font-weight: 700;
     width: 70px;
     height: 70px;
-    background: #b2e2ff;
     border-radius: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #00609b;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
     z-index: 1;
     position: relative;
+    transition: all 0.3s ease-in-out;
 }
 
 .process-title {
-    color: var(--color);
+    color: var(--titlecolor);
 }
 
 .process {
     position: relative;
+    padding: 35px 20px;
+    border-radius: 5px;
 }
 
-.process::after {
+.border-statick {
+    animation-play-state: paused;
     position: absolute;
-    content: "";
-    height: 1px;
-    background: var(--themecolor);
+    stroke-width: 2px;
+    stroke-dasharray: 4, 8;
+    stroke-dashoffset: 5;
+    stroke-linecap: round;
+    fill: transparent;
+    top: 0px;
+    left: 0px;
     width: 100%;
-    top: 32px;
-    left: 16px;
-    z-index: 0;
+    height: 100%;
 }
 
-.process:nth-child(2) .process-count {
-    background: var(--themecolor);
-    color: #fff;
+.stress .border-statick rect {
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
 }
 
-.process:nth-child(4):after {
-    content: unset;
+.stress:nth-child(1) .border-statick {
+    stroke: #abffc5;
 }
 
+.stress:nth-child(2) .border-statick {
+    stroke: #ffe4b2;
+}
+
+.stress:nth-child(3) .border-statick {
+    stroke: #bbe0ff;
+}
+
+.stress:nth-child(4) .border-statick {
+    stroke: #ffc8ef;
+}
+
+.stress:nth-child(1) .process-count {
+    color: #009e32;
+    background: #c8ffd9;
+}
+
+.stress:nth-child(2) .process-count {
+    color: #c78e25;
+    background: #ffeecf;
+}
+
+.stress:nth-child(3) .process-count {
+    color: #1265a8;
+    background: #cee9ff;
+}
+
+.stress:nth-child(4) .process-count {
+    color: #af1784;
+    background: #ffdaf5;
+}
+
+.stress:nth-child(1) .card:hover .process-count {
+    background: #009e32;
+    color: #ffffff;
+}
+
+.stress:nth-child(2) .card:hover .process-count {
+    background: #c78e25;
+    color: #ffffff;
+}
+
+.stress:nth-child(3) .card:hover .process-count {
+    background: #1265a8;
+    color: #ffffff;
+}
+
+.stress:nth-child(4) .card:hover .process-count {
+    background: #af1784;
+    color: #ffffff;
+}
+
+.stress .card {
+    height: 100%;
+    background: none;
+}
 
 button.accordion-btn {
     background: transparent;
@@ -72,8 +170,8 @@ button.accordion-btn {
     font-size: 18px;
 }
 
-button.accordion-btn:hover{
-    color: var(--themecolor);
+button.accordion-btn:hover {
+    color: var(--greencolor);
 }
 
 .accordion-button:focus {
@@ -83,10 +181,136 @@ button.accordion-btn:hover{
 }
 
 .accordion-button:not(.collapsed) {
-    color: var(--themecolor);
+    color: var(--greencolor);
     background-color: transparent;
     box-shadow: none;
 }
+
+.d-align-class {
+    display: flex;
+    align-items: center;
+}
+
+.accordion-button::after {
+    order: -1;
+    margin-left: 0;
+    margin-right: 15px;
+    background: var(--greencolor);
+    -webkit-mask-image: url("../../images/Group\ 1.svg");
+    mask-image: url("../../images/Group\ 1.svg");
+}
+
+[data-bs-theme=dark] .accordion-button::after {
+    --bs-accordion-btn-icon: url("../../images/Group\ 1.svg");
+    --bs-accordion-btn-active-icon: url("../../images/Group\ 1.svg");
+}
+
+[data-bs-theme=light] .accordion-button::after {
+    --bs-accordion-btn-icon: url("../../images/Group\ 1.svg");
+    --bs-accordion-btn-active-icon: url("../../images/Group\ 1.svg");
+}
+
+/* ===========================================================
+/* =================  our team  =======================
+=========================================================== */
+
+h6.card-subtitle.mb-2.text-body-secondary {
+    font-size: 14px;
+}
+
+.avtar-img {
+    width: 80px;
+}
+
+.ourteam-card .card-body {
+    padding: 35px;
+}
+
+a.page-btn-hover.me-3 {
+    font-style: 20px;
+}
+
+a.page-btn-hover.me-3:nth-child(1) {
+    color: rgb(255 0 165);
+}
+
+a.page-btn-hover.me-3:nth-child(2) {
+    color: rgb(67 116 255);
+}
+
+a.page-btn-hover.me-3:nth-child(3) {
+    color: rgb(96 183 255);
+}
+
+
+/* ===========================================================
+/* =================  strategy  =======================
+=========================================================== */
+
+.strategy .card-body {
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.strategy .card:nth-child(1) {
+    margin-right: 30px;
+}
+
+.strategy .card:nth-child(2) {
+    margin-left: 60px;
+}
+
+.strategy .card:nth-child(3) {
+    margin: 0px 30px;
+
+}
+
+.strategy-section .btn {
+    padding: 8px 35px;
+    border-radius: 3px;
+}
+
+.str-count {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    background: #d2ffe0;
+    color: #2cc55d;
+    border-radius: 50%;
+    margin-right: 20px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+
+/* ===========================================================
+/* =================  our soluction  =======================
+=========================================================== */
+
+.check-icon {
+    display: flex;
+    align-items: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 20px;
+    justify-content: center;
+    background: #d2ffe0;
+    color: #2cc55d;
+}
+
+
+.count-number-text{
+    color: var(--greencolor);
+    font-weight: 700;
+    font-size: 28px;
+}
+
+/* ===========================================================
+/* =================  media query  =======================
+=========================================================== */
+
 
 @media(max-width:991px) {
     .process:after {
@@ -99,7 +323,24 @@ button.accordion-btn:hover{
         padding: 30px 0;
     }
 
-    .align-items-center {
+    .text-align-center {
         text-align: center;
+    }
+}
+
+@media (max-width:575px) {
+    .strategy .card {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .str-count {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+    }
+
+    .strategy .card-body {
+        padding: 20px;
     }
 }

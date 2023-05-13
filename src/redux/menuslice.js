@@ -3,29 +3,36 @@ import { createSlice } from '@reduxjs/toolkit'
 const initialState = {
     showing: false,
     typeinput: false,
-    getdata:[],
+    getdata: [],
 }
 
 export const menuslice = createSlice({
     name: 'menuslice',
     initialState,
     reducers: {
-        showmenu: (state) =>{
+        showmenu: (state) => {
             state.showing = true;
         },
-        hidemenu: (state) =>{
+        hidemenu: (state) => {
+            state.showing = false;
+             window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        },
+        sidemenuhide: (state) => {
             state.showing = false;
         },
-        hideshowicon: (state)=>{
+        hideshowicon: (state) => {
             state.typeinput = !state.typeinput;
         },
-        senddata: (state, actions)=>{
+        senddata: (state, actions) => {
             state.getdata = actions.payload
         },
     },
 })
 
 // Action creators are generated for each case reducer function
-export const { showmenu, hidemenu, hideshowicon, senddata } = menuslice.actions
+export const { showmenu, hidemenu, hideshowicon, senddata, sidemenuhide } = menuslice.actions
 
 export default menuslice.reducer

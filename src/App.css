@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
 * {
   box-sizing: border-box;
-  /* color: var(--color); */
+  /* color: var(--titlecolor); */
   outline: none;
   font-family: 'Roboto', sans-serif;
 }
@@ -37,9 +37,14 @@ a:hover {
 }
 
 
+[data-bs-theme=light] .mode-btn {
+  background: #00008b;
+}
+[data-bs-theme=dark] .mode-btn {
+  background: #0aaae7;
+}
 .mode-btn {
   display: inline-flex;
-  background: var(--themecolor);
   padding: 10px 20px 10px 10px;
   position: fixed;
   top: 100px;
@@ -55,11 +60,11 @@ a:hover {
 }
 
 .btn-theme-color {
-  background-color: var(--themecolor);
+  background-color: var(--purplecolor);
   color: #fff;
 }
 .btn-theme-color:hover {
-  background-color: var(--themecolor-hover);
+  background-color: var(--greencolor);
   color: #fff;
 }
 .btn-check:checked+.btn:focus-visible,
@@ -70,7 +75,8 @@ a:hover {
 .btn.active,
 :not(.btn-check)+.btn:active,
 .btn:focus-visible{
-  background-color: var(--themecolor-hover) ;
+  background-color: var(--greencolor) ;
+  color: #fff;
 }
 .btn{
   border: none;
@@ -78,7 +84,11 @@ a:hover {
 
 .section-title{
   font-weight: 700;
-  color: var(--color);
+  color: var(--titlecolor);
+}
+
+h2.section-title {
+  font-size: 28px;
 }
 
 .pad-tb-section {
@@ -93,23 +103,34 @@ a:hover {
   transition: all 0.3s linear;
 }
 
+.card {
+  border: none;
+  background: var(--box_background);
+  box-shadow: 0 0.25rem 1.75rem rgba(30, 34, 40, .07);
+  transition: transform 0.5s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
 
 [data-bs-theme=light] {
-  --themecolor:#0073b9;
-  --themecolor-hover:#055688;
-  --background: #ffffff;
-  --box_background: #f7f7f7;
-  --color: #000;
+  --purplecolor:#b561d5;
+  --greencolor:#2cc55d;
+  --box_background: #ffffff;
+  --titlecolor: #113860;
   --nav_background: #ffffff;
+  --bs-body-color: #6084a4;
 }
 
 [data-bs-theme=dark] {
-  --themecolor: #10a1f9;
-  --themecolor-hover: #066faf;
-  --background: #333638;
-  --box_background: #333638;
-  --color: #ffffff;
+  --purplecolor: #b561d5;
+  --greencolor: #2cc55d;
+  --box_background: #2b3136;
+  --titlecolor: #ffffff;
   --nav_background: #141516;
+  --bs-body-color: #b7b7b7;
 }
 
 

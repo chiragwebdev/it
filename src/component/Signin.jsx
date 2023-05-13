@@ -54,11 +54,13 @@ function Signin() {
                 <p className='pass-error'>{passworderror}</p>
               </div>
             </div>
-            <input type="submit" value="Sign In" className='btn btn-theme-color submit mb-4' />
+            <div className='btn btn-text-white purple-btn-color my-4 w-100 p-0'>
+              <input type="submit" value="Sing in" className='submit-btn' />
+            </div>
           </form>
           <p className='text-center mb-2'><Link to="/signin" className='signin-a-hover'>Forgot Password?</Link></p>
           <p className='text-center'>Don't have an account? <Link to="/signin" className='signin-a-hover'>Sign Up</Link></p>
-          <div class="divider-icon my-4">or</div>
+          <div className="divider-icon my-4">or</div>
           <ul className='social-row'>
             <li className=''>
               <Link className='social-icon-li page-btn-hover'><FaGoogle /></Link>

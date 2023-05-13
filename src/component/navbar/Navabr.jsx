@@ -4,7 +4,7 @@ import "./navbar.css"
 import { CgMenuRightAlt, CgClose } from 'react-icons/cg'
 import { BsCaretDownFill } from 'react-icons/bs'
 import { useDispatch, useSelector } from 'react-redux'
-import { showmenu, hidemenu } from '../../redux/menuslice'
+import { showmenu, hidemenu, sidemenuhide } from '../../redux/menuslice'
 
 function Navabr() {
     const [scrolling, setscrolling] = useState(0)
@@ -21,6 +21,12 @@ function Navabr() {
         dispatch(hidemenu());
         setonmenushow(false)
     }
+    const handlesidehidemenu = () => {
+        dispatch(sidemenuhide());
+        setonmenushow(false)
+    }
+
+
 
     useEffect(() => {
         window.addEventListener('scroll', () => {
@@ -33,13 +39,13 @@ function Navabr() {
     return (
         <>
             <header className={`${scrolling > 100 ? 'headerscroll scroll-active ' : "headerscroll"}`}>
-                <div className={`overlaynone ${showing ? "overlay" : ""}`} onClick={handlehidemenu}></div>
+                <div className={`overlaynone ${showing ? "overlay" : ""}`} onClick={handlesidehidemenu}></div>
                 <div className="container">
                     <div className="navbar-head">
                         <Link to="/" className="logo" onClick={() => { window.scrollTo(0, 0) }}>LOGO</Link>
                         <nav className={`nav-list ${showing ? "nav-list-show" : ""}`}>
                             <ul className='nav-item'>
-                                <li onClick={handlehidemenu} ><CgClose className='menu-icon close-icon' /></li>
+                                <li  ><CgClose className='menu-icon close-icon' onClick={handlesidehidemenu} /></li>
                                 <li onClick={handlehidemenu} ><Link to="/" className="nav-item-name" onClick={() => { window.scrollTo(0, 0) }}>Home</Link></li>
                                 <li className='position-relative drophover' onClick={dropmenushow}><Link className="nav-item-name" >Dropdown <BsCaretDownFill className={`${onmenushow ? "flip-icon" : ""}`} /></Link>
                                     <ul className={`dropdown-list ${onmenushow ? "dropdown-list-onshow" : ""}`}>
@@ -62,16 +68,16 @@ function Navabr() {
                                 <li onClick={handlehidemenu} ><Link to="#about" className="nav-item-name" >About</Link></li>
                                 <li onClick={handlehidemenu} ><Link to="#contact" className="nav-item-name" >Contact</Link></li>
                                 <div className='show-signin'>
-                                    <li className="nav-item-name"><Link to="/signin" onClick={handlehidemenu} className="btn btn-color-border w-100">Sign in</Link></li>
-                                    <li className="nav-item-name"><Link to="/register" onClick={handlehidemenu} className="btn btn-text-white btn-color w-100">Register</Link></li>
+                                    <li className="nav-item-name"><Link to="/signin" onClick={handlehidemenu} className="btn btn-text-white green-btn-color  w-100">Sign in</Link></li>
+                                    <li className="nav-item-name"><Link to="/register" onClick={handlehidemenu} className="btn btn-text-white purple-btn-color w-100">Register</Link></li>
                                 </div>
 
                             </ul>
                         </nav>
                         <div className='header-btn'>
                             <div className='hide-signin'>
-                                <Link to="/signin" className="btn btn-color-border">Sign in</Link>
-                                <Link to="/register" className="btn btn-text-white btn-color">Register</Link>
+                                <Link to="/signin" className="btn btn-text-white green-btn-color">Sign in</Link>
+                                <Link to="/register" className="btn btn-text-white purple-btn-color">Register</Link>
                             </div>
                             <div className='menu-icon burger-menu' onClick={() => dispatch(showmenu())}><CgMenuRightAlt /></div>
                         </div>
