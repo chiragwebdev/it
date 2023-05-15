@@ -3,13 +3,12 @@ import './App.css';
 import Navabr from './component/navbar/Navabr';
 import Register from './component/Register';
 import Signin from './component/Signin';
-import Main from './pages/Main';
 import Advance from './pages/advance/Advance';
 import Service from './pages/service/Service.jsx';
 import { Link } from 'react-router-dom'
 import { ImBrightnessContrast } from 'react-icons/im'
 import { MdDarkMode } from 'react-icons/md'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Hero from './pages/heropage/Hero';
 
 
@@ -21,6 +20,13 @@ function App() {
     } else
       document.body.setAttribute("data-bs-theme", "light");
   }
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
+  }, [])
+  
   return (
     <BrowserRouter>
       <Navabr />

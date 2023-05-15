@@ -301,10 +301,13 @@ a.page-btn-hover.me-3:nth-child(3) {
 }
 
 
-.count-number-text{
+.count-number-text {
     color: var(--greencolor);
     font-weight: 700;
     font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* ===========================================================
