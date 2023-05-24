@@ -8,6 +8,7 @@
 
 body {
   margin: 0;
+  height: 100vh;
 }
 
 h1,
@@ -132,5 +133,6 @@ h2.section-title {
   --nav_background: #141516;
   --bs-body-color: #b7b7b7;
 }
+ 
 
 

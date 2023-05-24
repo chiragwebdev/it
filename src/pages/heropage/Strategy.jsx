@@ -9,7 +9,7 @@ function Strategy() {
                     <div className="col text-center mb-5">
                         <h2 className='mb-2 section-title col-xl-6 col-lg-8 col-md-10 m-auto'>OUR STRATEGY</h2>
                         <div className="bar"></div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p className='col-xl-6 col-lg-8 col-md-10 m-auto'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
                 </div>
                 <div className="row">

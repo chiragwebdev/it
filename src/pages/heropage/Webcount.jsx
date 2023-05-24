@@ -9,6 +9,7 @@ function Webcount() {
         count3: "",
         count4: "",
     })
+ 
 
     const myComponentRef = useRef();
 
@@ -25,6 +26,7 @@ function Webcount() {
                     count4: "70",
                 })
             }
+           
         })
         myComponentview.observe(myComponentRef.current)
 
@@ -38,24 +40,24 @@ function Webcount() {
                     <div className="col text-center mb-5">
                         <h2 className='mb-2 section-title col-xl-6 col-lg-8 col-md-10 m-auto'>We Always Try To Understand Users Expectation</h2>
                         <div className="bar"></div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p className='col-xl-6 col-lg-8 col-md-10 m-auto'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
                 </div>
                 <div className="row gy-5" ref={myComponentRef}>
                     <div className="col-md-3 col-6 text-center">
-                        <h2 className='mb-2 count-number-text'><Odometer value={count.count1} />K</h2>
+                        <h2 className='mb-2 count-number-text'><Odometer duration="500" value={count.count1} />K</h2>
                         <p className=''>Downloaded</p>
                     </div>
                     <div className="col-md-3 col-6 text-center">
-                        <h2 className='mb-2 count-number-text'> <Odometer value={count.count2} />K</h2>
+                        <h2 className='mb-2 count-number-text'> <Odometer duration="500" value={count.count2} />K</h2>
                         <p className=''>Feedback</p>
                     </div>
                     <div className="col-md-3 col-6 text-center">
-                        <h2 className='mb-2 count-number-text'> <Odometer value={count.count3} />K</h2>
+                        <h2 className='mb-2 count-number-text'> <Odometer duration="500" value={count.count3} />K</h2>
                         <p className=''>Workers</p>
                     </div>
                     <div className="col-md-3 col-6 text-center">
-                        <h2 className='mb-2 count-number-text'> <Odometer value={count.count4} />K</h2>
+                        <h2 className='mb-2 count-number-text'> <Odometer duration="500" value={count.count4} />K</h2>
                         <p className=''>Contributors</p>
                     </div>
                 </div>
