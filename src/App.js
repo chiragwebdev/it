@@ -11,6 +11,7 @@ import { MdDarkMode } from 'react-icons/md'
 import { useEffect, useState } from 'react';
 import Hero from './pages/heropage/Hero';
 import ScrollToTop from './ScrolltoTop';
+import Footer from './pages/heropage/Footer';
 
 
 function App() {
@@ -39,24 +40,26 @@ function App() {
         <>
           <ScrollToTop />
         </>
-      ) : <>
-        <Navabr />
-        <div className='mode-btn'>
-          {
-            dark ? <Link className='mode-icon'><ImBrightnessContrast onClick={() => setdark(!dark)} /></Link>
-              :
-              <Link className='mode-icon'> <MdDarkMode onClick={() => setdark(!dark)} /></Link>
-          }
-        </div>
-        <Routes data-scrollbar>
-          <Route path="/" element={<Hero />} />
-          <Route path="/signin" element={<Signin />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/advance" element={<Advance />} />
-          <Route path="/service" element={<Service />} />
-          <Route path="*" element={<Navigate to="/" />} />
-        </Routes>
-      </>
+      ) :
+        <>
+          <Navabr />
+          <div className='mode-btn'>
+            {
+              dark ? <Link className='mode-icon'><ImBrightnessContrast onClick={() => setdark(!dark)} /></Link>
+                :
+                <Link className='mode-icon'> <MdDarkMode onClick={() => setdark(!dark)} /></Link>
+            }
+          </div>
+          <Routes data-scrollbar>
+            <Route path="/" element={<Hero />} />
+            <Route path="/signin" element={<Signin />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/advance" element={<Advance />} />
+            <Route path="/service" element={<Service />} />
+            <Route path="*" element={<Navigate to="/" />} />
+          </Routes>
+          <Footer />
+        </>
       }
     </BrowserRouter>
   );

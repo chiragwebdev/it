@@ -9,6 +9,7 @@ import Soluction from './Soluction'
 import Webcount from './Webcount'
 import Features from './Features'
 import Pricing from './Pricing'
+import OurClient from './OurClient'
 
 function Hero() {
 
@@ -38,6 +39,7 @@ function Hero() {
             <Soluction />
             <Features />
             <Pricing />
+            <OurClient />
         </>
     )
 }

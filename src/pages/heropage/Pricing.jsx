@@ -12,7 +12,7 @@ const Pricing = () => {
                     </div>
                 </div>
                 <div className="row gy-4">
-                    <div className="col-lg-4 col-sm-6 pricing" >
+                    <div className="col-lg-4 col-sm-8 mx-auto pricing" >
                         <div className="card h-100 ">
                             <div className="card-body text-center">
                                 <p className='mb-3'>Basic Plan</p>
@@ -20,37 +20,43 @@ const Pricing = () => {
                                 <p className='mb-3'>5 Projects</p>
                                 <p className='mb-3'>100K API Access</p>
                                 <p className='mb-3'>200MB Storage</p>
+                                <p className='mb-3'>Unlimited Users</p>
+                                <p className='mb-3'>Unlimited Website</p>
                                 <p className='mb-3'>Weekly Reports</p>
                                 <p className='mb-5'>7/24 Support</p>
-                                <a class="btn btn-text-white green-btn-color m-0 pricing-btn" href="/">Choose Plan</a>
+                                <a className="btn btn-text-white green-btn-color m-0 pricing-btn" href="/">Choose Plan</a>
                             </div>
                         </div>
                     </div>
-                    <div className="col-lg-4 col-sm-6 pricing" >
+                    <div className="col-lg-4 col-sm-8 mx-auto pricing" >
                         <div className="card h-100 ">
                             <div className="card-body text-center">
-                                <p className='mb-3'>Basic Plan</p>
+                                <p className='mb-3'>Premium Plan</p>
                                 <h2 className='mb-5 section-title'>$20.00 <span>/Mon</span></h2>
                                 <p className='mb-3'>10 Projects</p>
                                 <p className='mb-3'>200K API Access</p>
                                 <p className='mb-3'>500MB Storage</p>
+                                <p className='mb-3'>Unlimited Users</p>
+                                <p className='mb-3'>Unlimited Website</p>
                                 <p className='mb-3'>Weekly Reports</p>
                                 <p className='mb-5'>7/24 Support</p>
-                                <a class="btn btn-text-white purple-btn-color m-0 pricing-btn" href="/">Choose Plan</a>
+                                <a className="btn btn-text-white purple-btn-color m-0 pricing-btn" href="/">Choose Plan</a>
                             </div>
                         </div>
                     </div>
-                    <div className="col-lg-4 col-sm-6 mx-auto pricing" >
+                    <div className="col-lg-4 col-sm-8 mx-auto mx-auto pricing" >
                         <div className="card h-100 ">
                             <div className="card-body text-center">
-                                <p className='mb-3'>Basic Plan</p>
+                                <p className='mb-3'>Corporate Plan</p>
                                 <h2 className='mb-5 section-title'>$25.00 <span>/Mon</span></h2>
                                 <p className='mb-3'>15 Projects</p>
                                 <p className='mb-3'>300K API Access</p>
                                 <p className='mb-3'>1000MB Storage</p>
+                                <p className='mb-3'>Unlimited Users</p>
+                                <p className='mb-3'>Unlimited Website</p>
                                 <p className='mb-3'>Weekly Reports</p>
                                 <p className='mb-5'>7/24 Support</p>
-                                <a class="btn btn-text-white green-btn-color m-0 pricing-btn" href="/">Choose Plan</a>
+                                <a className="btn btn-text-white green-btn-color m-0 pricing-btn" href="/">Choose Plan</a>
                             </div>
                         </div>
                     </div>

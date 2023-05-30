@@ -384,15 +384,103 @@ a.page-btn-hover.me-3:nth-child(3) {
     padding-top: 60px;
     padding-bottom: 60px;
 }
+
 .pricing .section-title {
     color: var(--greencolor);
 }
+
 .pricing:nth-child(2) .section-title {
     color: var(--purplecolor);
 }
 
 
 
+/* ===========================================================
+/* =================  our client  =======================
+=========================================================== */
+
+
+.client-img {
+    width: 60px !important;
+}
+
+.item.client {
+    background: var(--our-clien-bg);
+    padding: 30px 20px;
+    border-radius: 5px;
+}
+
+.client-sub {
+    color: var(--greencolor);
+}
+
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+    background: var(--greencolor) !important;
+}
+
+.client-content {
+    font-size: 14px;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+    width: 7px !important;
+    height: 7px !important;
+}
+
+/* ===========================================================
+/* =================  footer =======================
+=========================================================== */
+
+.footer {
+    background: var(--our-clien-bg);
+}
+
+.footer .btn {
+    padding: 12px 50px;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.footer h4 {
+    color: var(--titlecolor);
+}
+
+.p-font14 {
+    font-size: 14px;
+    color: var(--bs-body-color);
+}
+
+.footer ul li .p-font14 {
+    padding-left: 0px;
+    transition: all 0.2s linear;
+}
+
+.footer ul li .p-font14:hover {
+    color: var(--greencolor);
+    padding-left: 8px;
+}
+
+.social-icon {
+    background: var(--social-icon-bg);
+    border-radius: 20px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--bs-body-color);
+    margin-right: 10px;
+    transition: all .2s linear;
+}
+.social-icon:hover {
+    background: var(--greencolor);
+    color: #fff;
+    transform: translateY(-5px);    
+}
+.icon-details{
+    /* font-size: 18px; */
+}
 /* ===========================================================
 /* =================  media query  =======================
 =========================================================== */
