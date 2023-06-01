@@ -5,10 +5,16 @@ import { CgMenuRightAlt, CgClose } from 'react-icons/cg'
 import { BsCaretDownFill } from 'react-icons/bs'
 import { useDispatch, useSelector } from 'react-redux'
 import { showmenu, hidemenu, sidemenuhide } from '../../redux/menuslice'
+import { Power2, gsap } from 'gsap'
 
 function Navabr() {
     const [scrolling, setscrolling] = useState(0)
     const { showing } = useSelector((state) => state.menuslice)
+    if (showing) {
+        document.body.style.overflow = "hidden"
+    } else {
+        document.body.style.overflow = "visible"
+    }
     const dispatch = useDispatch()
     const [onmenushow, setonmenushow] = useState(false)
     const dropmenushow = () => {
@@ -26,11 +32,34 @@ function Navabr() {
         setonmenushow(false)
     }
 
+   
     useEffect(() => {
         window.addEventListener('scroll', () => {
             const scorllcount = window.scrollY;
             setscrolling(scorllcount)
         })
+        gsap.from(".logo", {
+            opacity: 0,
+            x: -20,
+            duration: 0.6,
+            delay: 0.1,
+            ease: Power2,
+        })
+        gsap.from(".lianim", {
+            opacity: 0,
+            x: -20,
+            duration: 0.6,
+            delay: 0.2,
+            ease: Power2,
+        })
+        gsap.from(".header-btn", {
+            opacity: 0,
+            x: -20,
+            duration: 0.6,
+            delay: 0.3,
+            ease: Power2,
+        })
+
     }, [])
 
 
@@ -66,16 +95,16 @@ function Navabr() {
                                 <li onClick={handlehidemenu} className='lianim'><Link to="#about" className="nav-item-name" >About</Link></li>
                                 <li onClick={handlehidemenu} className='lianim'><Link to="#contact" className="nav-item-name" >Contact</Link></li>
                                 <div className='show-signin'>
-                                    <li className="nav-item-name lianim"><Link to="/signin" onClick={handlehidemenu} className="btn btn-text-white green-btn-color  w-100">Sign in</Link></li>
-                                    <li className="nav-item-name lianim"><Link to="/register" onClick={handlehidemenu} className="btn btn-text-white purple-btn-color w-100">Register</Link></li>
+                                    <li className="nav-item-name "><Link to="/signin" onClick={handlehidemenu} className="btn btn-text-white green-btn-color  w-100">Sign in</Link></li>
+                                    <li className="nav-item-name "><Link to="/register" onClick={handlehidemenu} className="btn btn-text-white purple-btn-color w-100">Register</Link></li>
                                 </div>
 
                             </ul>
                         </nav>
                         <div className='header-btn'>
                             <div className='hide-signin'>
-                                <Link to="/signin" className="btn btn-text-white green-btn-color lianim">Sign in</Link>
-                                <Link to="/register" className="btn btn-text-white purple-btn-color lianim">Register</Link>
+                                <Link to="/signin" className="btn btn-text-white green-btn-color ">Sign in</Link>
+                                <Link to="/register" className="btn btn-text-white purple-btn-color ">Register</Link>
                             </div>
                             <div className='menu-icon burger-menu' onClick={() => dispatch(showmenu())}><CgMenuRightAlt /></div>
                         </div>

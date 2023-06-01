@@ -3,15 +3,12 @@ import './App.css';
 import Navabr from './component/navbar/Navabr';
 import Register from './component/Register';
 import Signin from './component/Signin';
-import Advance from './pages/advance/Advance';
-import Service from './pages/service/Service.jsx';
 import { Link } from 'react-router-dom'
 import { ImBrightnessContrast } from 'react-icons/im'
 import { MdDarkMode } from 'react-icons/md'
 import { useEffect, useState } from 'react';
-import Hero from './pages/heropage/Hero';
 import ScrollToTop from './ScrolltoTop';
-import Footer from './pages/heropage/Footer';
+import Main from './Main';
 
 
 function App() {
@@ -20,8 +17,10 @@ function App() {
 
   if (dark === false) {
     document.body.setAttribute("data-bs-theme", "dark");
-  } else
-    document.body.setAttribute("data-bs-theme", "light");
+    document.documentElement.setAttribute("style", "color-scheme: dark");
+  } else{
+  document.body.setAttribute("data-bs-theme", "light");
+  document.documentElement.setAttribute("style", "color-scheme: light");}
 
   const [isLoading, setLoading] = useState(true);
 
@@ -51,14 +50,11 @@ function App() {
             }
           </div>
           <Routes data-scrollbar>
-            <Route path="/" element={<Hero />} />
-            <Route path="/signin" element={<Signin />} />
-            <Route path="/register" element={<Register />} />
-            <Route path="/advance" element={<Advance />} />
-            <Route path="/service" element={<Service />} />
-            <Route path="*" element={<Navigate to="/" />} />
+            <Route exact path="/signin" element={<Signin />} />
+            <Route exact path="/register" element={<Register />} />
+            <Route exact path="*" element={<Main />} />
+           
           </Routes>
-          <Footer />
         </>
       }
     </BrowserRouter>

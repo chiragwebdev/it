@@ -49,7 +49,7 @@
 .signinpage .purple-btn-color:after {
     width: 30em;
     height: 30em;
-    transition: all 0.4s ease-out;
+    transition: all 0.25s ease-out;
 }
 
 .pass-error {

@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom'
 
 function Footer() {
     return (
-        <section className='pad-tb-section footer' >
+        <footer className='pad-tb-section footer mb-4' >
             <div className="container">
                 <div className="row">
                     <div className="col-lg-6 mb-4">
@@ -64,7 +64,7 @@ function Footer() {
                     </div>
                 </div>
             </div>
-        </section>
+        </footer>
     )
 }
 

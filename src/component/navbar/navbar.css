@@ -219,6 +219,7 @@ ul.dropdown-list.dropdown-list-onshow li {
 
     .nav-list-show {
         right: 0px;
+        overflow: auto;
     }
 
     .nav-item {
