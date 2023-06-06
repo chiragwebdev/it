@@ -12,8 +12,9 @@ function Webcount() {
  
 
     const myComponentRef = useRef();
-
+    
     useEffect(() => {
+
         const myComponentview = new IntersectionObserver((entries) => {
             // const enter = entries[0]
             // console.log(enter)
@@ -43,20 +44,20 @@ function Webcount() {
                         <p className='col-xl-6 col-lg-8 col-md-10 m-auto'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
                 </div>
-                <div className="row gy-5" ref={myComponentRef}>
-                    <div className="col-md-3 col-6 text-center">
+                <div className="row row-gap-5" ref={myComponentRef}>
+                    <div className="col-md-3 col-6 text-center count-number-1">
                         <h2 className='mb-2 count-number-text'><Odometer duration="500" value={count.count1} />K</h2>
                         <p className=''>Downloaded</p>
                     </div>
-                    <div className="col-md-3 col-6 text-center">
+                    <div className="col-md-3 col-6 text-center count-number-2">
                         <h2 className='mb-2 count-number-text'> <Odometer duration="500" value={count.count2} />K</h2>
                         <p className=''>Feedback</p>
                     </div>
-                    <div className="col-md-3 col-6 text-center">
+                    <div className="col-md-3 col-6 text-center count-number-3">
                         <h2 className='mb-2 count-number-text'> <Odometer duration="500" value={count.count3} />K</h2>
                         <p className=''>Workers</p>
                     </div>
-                    <div className="col-md-3 col-6 text-center">
+                    <div className="col-md-3 col-6 text-center count-number-4">
                         <h2 className='mb-2 count-number-text'> <Odometer duration="500" value={count.count4} />K</h2>
                         <p className=''>Contributors</p>
                     </div>

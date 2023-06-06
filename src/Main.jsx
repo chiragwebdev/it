@@ -2,7 +2,7 @@ import { Navigate, Route, Routes, } from 'react-router-dom';
 import Advance from './pages/advance/Advance';
 import Service from './pages/service/Service';
 import Hero from './pages/heropage/Hero';
-import Footer from './pages/heropage/Footer';
+import Footer from './component/Footer';
 
 
 function Main() {

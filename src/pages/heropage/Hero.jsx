@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import heroimage from '../../images/mainimage 1.svg'
 import './hero.css'
 import Section3 from './Section3'
@@ -10,59 +10,9 @@ import Webcount from './Webcount'
 import Features from './Features'
 import Pricing from './Pricing'
 import OurClient from './OurClient'
-import { Power2, gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/all'
+
 
 function Hero() {
-    gsap.registerPlugin(ScrollTrigger)
-
-    useEffect(() => {
-        gsap.from(".tltle-anim", {
-            opacity: 0,
-            y: 50,
-            duration: 0.6,
-            delay: 0.1,
-            ease: Power2,
-        })
-        gsap.from(".h1-title", {
-            opacity: 0,
-            y: 50,
-            duration: 0.6,
-            delay: 0.1,
-            ease: Power2,
-            scrollTrigger: {
-                trigger: ".h1-title",
-                start: "top 90%",
-                // markers: {
-                //     startColor: "yellow"
-                // }
-            },
-        })
-        gsap.from(".hero-title-contant", {
-            opacity: 0,
-            y: 50,
-            duration: 0.6,
-            delay: 0.2,
-            ease: Power2,
-            scrollTrigger: {
-                trigger: ".hero-title-contant",
-                start: "top 90%",
-            },
-        })
-        gsap.from(".hero-title-btn", {
-            opacity: 0,
-            y: 50,
-            duration: 0.6,
-            delay: 0.3,
-            ease: Power2,
-            scrollTrigger: {
-                trigger: ".hero-title-btn",
-                start: "top 90%",
-            },
-        })
-    }, [])
-
-
 
     return (
         <>

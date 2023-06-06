@@ -182,7 +182,7 @@
 }
 
 .scroll-active {
-    background: var(--nav_background);
+    background: var(--box_background);
     position: sticky;
     top: 0;
     width: 100%;

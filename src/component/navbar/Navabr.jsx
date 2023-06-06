@@ -5,7 +5,6 @@ import { CgMenuRightAlt, CgClose } from 'react-icons/cg'
 import { BsCaretDownFill } from 'react-icons/bs'
 import { useDispatch, useSelector } from 'react-redux'
 import { showmenu, hidemenu, sidemenuhide } from '../../redux/menuslice'
-import { Power2, gsap } from 'gsap'
 
 function Navabr() {
     const [scrolling, setscrolling] = useState(0)
@@ -38,28 +37,6 @@ function Navabr() {
             const scorllcount = window.scrollY;
             setscrolling(scorllcount)
         })
-        gsap.from(".logo", {
-            opacity: 0,
-            x: -20,
-            duration: 0.6,
-            delay: 0.1,
-            ease: Power2,
-        })
-        gsap.from(".lianim", {
-            opacity: 0,
-            x: -20,
-            duration: 0.6,
-            delay: 0.2,
-            ease: Power2,
-        })
-        gsap.from(".header-btn", {
-            opacity: 0,
-            x: -20,
-            duration: 0.6,
-            delay: 0.3,
-            ease: Power2,
-        })
-
     }, [])
 
 
@@ -73,7 +50,7 @@ function Navabr() {
                         <nav className={`nav-list ${showing ? "nav-list-show" : ""}`}>
                             <ul className='nav-item'>
                                 <li  ><CgClose className='menu-icon close-icon' onClick={handlesidehidemenu} /></li>
-                                <li onClick={handlehidemenu} className='lianim'><Link to="/" className="nav-item-name" onClick={() => { window.scrollTo(0, 0) }}>Home</Link></li>
+                                <li onClick={handlehidemenu} className='lianim'><Link to="/" className="nav-item-name">Home</Link></li>
                                 <li className='position-relative drophover lianim' onClick={dropmenushow}><Link className="nav-item-name" >Dropdown <BsCaretDownFill className={`${onmenushow ? "flip-icon" : ""}`} /></Link>
                                     <ul className={`dropdown-list ${onmenushow ? "dropdown-list-onshow" : ""}`}>
                                         <li onClick={() => dispatch(hidemenu())} >

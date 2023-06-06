@@ -8,19 +8,19 @@ import { Link } from 'react-router-dom'
 
 function Footer() {
     return (
-        <footer className='pad-tb-section footer mb-4' >
+        <footer className='footer' >
             <div className="container">
-                <div className="row">
-                    <div className="col-lg-6 mb-4">
+                <div className="row align-items-center row-gap-4">
+                    <div className="col-lg-6 col-md-8 ">
                         <h2 className='section-title'>Join our community by using our services and grow your business.</h2>
                     </div>
-                    <div className="col-lg-6 text-end mb-4">
+                    <div className="col text-md-end ">
                         <div className="btn btn-text-white green-btn-color page-btn-hover ">Try For Free</div>
                     </div>
                 </div>
-                <hr />
-                <div className="row">
-                    <div className="col-lg-3 col-sm-6 mt-4">
+                <div className='footer-line-border'></div>
+                <div className="row row-gap-4">
+                    <div className="col-lg-3 col-sm-6">
                         <h4 className='mb-3'>LOGO</h4>
                         <p className='p-font14'>Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
                         <h4 className='mb-3  mt-4'>Follow Us</h4>
@@ -31,7 +31,7 @@ function Footer() {
                             <Link to="" className='social-icon'><FaLinkedinIn /></Link>
                         </div>
                     </div>
-                    <div className="col-lg-3 col-sm-6 mt-4">
+                    <div className="col-lg-3 col-sm-6">
                         <h4 className='mb-3'>Company</h4>
                         <ul>
                             <li className='mb-2'><Link to="" className='p-font14'>Services</Link></li>
@@ -41,7 +41,7 @@ function Footer() {
                             <li className='mb-2'><Link to="" className='p-font14'>Contact</Link></li>
                         </ul>
                     </div>
-                    <div className="col-lg-3 col-sm-6 mt-4">
+                    <div className="col-lg-3 col-sm-6">
                         <h4 className='mb-3'>Support</h4>
                         <ul>
                             <li className='mb-2'><Link to="" className='p-font14'>FAQ's</Link></li>
@@ -50,7 +50,7 @@ function Footer() {
                             <li className='mb-2'><Link to="" className='p-font14'>Support Us</Link></li>
                         </ul>
                     </div>
-                    <div className="col-lg-3 col-sm-6 mt-4">
+                    <div className="col-lg-3 col-sm-6">
                         <h4 className='mb-3'>Get in Touch</h4>
                         <div className='d-flex align-items-center mb-3'>
                             <div><HiLocationMarker className='me-2 icon-details' /></div><p className='p-font14'> Moonshine St. 14/05 Light City, London, United Kingdom</p>

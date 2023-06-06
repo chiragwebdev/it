@@ -34,7 +34,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div id='stater'></div>
+      {/* <div id='stater'></div> */}
       {isLoading ? (
         <>
           <ScrollToTop />

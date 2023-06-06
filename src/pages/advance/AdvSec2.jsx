@@ -41,7 +41,7 @@ function AdvSec2() {
                         <p className='col-xl-6 col-lg-8 col-md-10 m-auto'>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
                     </div>
                 </div>
-                <div className="row gy-4">
+                <div className="row row-gap-4">
                     {
                         data.map((cuel, index) => {
                             return (

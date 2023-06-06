@@ -11,7 +11,7 @@ const Pricing = () => {
                         <p className='col-xl-6 col-lg-8 col-md-10 m-auto'>Enjoy a free 30-day trial and experience the full service. No credit card required!</p>
                     </div>
                 </div>
-                <div className="row gy-4">
+                <div className="row row-gap-4">
                     <div className="col-lg-4 col-sm-8 mx-auto pricing" >
                         <div className="card h-100 ">
                             <div className="card-body text-center">

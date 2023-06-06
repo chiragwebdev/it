@@ -434,12 +434,19 @@ a.page-btn-hover.me-3:nth-child(3) {
 
 .footer {
     background: var(--our-clien-bg);
+    padding: 70px 0;
 }
 
 .footer .btn {
     padding: 12px 50px;
     font-weight: 700;
-    margin-top: 20px;
+}
+
+.footer-line-border {
+    height: 1px;
+    width: 100%;
+    background: var(--bs-body-color);
+    margin: 40px 0;
 }
 
 .footer h4 {
@@ -473,14 +480,17 @@ a.page-btn-hover.me-3:nth-child(3) {
     margin-right: 10px;
     transition: all .2s linear;
 }
+
 .social-icon:hover {
     background: var(--greencolor);
     color: #fff;
-    transform: translateY(-5px);    
+    transform: translateY(-5px);
 }
-.icon-details{
+
+.icon-details {
     /* font-size: 18px; */
 }
+
 /* ===========================================================
 /* =================  media query  =======================
 =========================================================== */

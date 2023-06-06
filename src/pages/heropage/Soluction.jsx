@@ -18,7 +18,7 @@ function Soluction() {
                         <div className='col-12'>
                             <h2 className='mb-2 section-title mb-4'>We make your spending stress-free for you to have the perfect control.</h2>
                             <p className='mb-4'>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus.</p>
-                            <div className="row gy-4">
+                            <div className="row row-gap-4">
                                 <div className="col-md-6 d-flex">
                                     <div>
                                         <div className='check-icon me-3'><GoCheck /></div>

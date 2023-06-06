@@ -2,11 +2,13 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 function Strategy() {
+
+    
     return (
         <section className='strategy-section pad-tb-section'>
             <div className="container">
                 <div className="row">
-                    <div className="col text-center mb-5">
+                    <div className="col text-center mb-5 our-stategy">
                         <h2 className='mb-2 section-title col-xl-6 col-lg-8 col-md-10 m-auto'>OUR STRATEGY</h2>
                         <div className="bar"></div>
                         <p className='col-xl-6 col-lg-8 col-md-10 m-auto'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
