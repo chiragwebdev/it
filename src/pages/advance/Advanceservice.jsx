@@ -1,6 +1,7 @@
 import React from 'react'
 import { MdOutlineDone } from 'react-icons/md'
 import advance from "../../images/advance.svg"
+import { Link } from 'react-router-dom'
 
 function Advanceservice() {
 
@@ -49,7 +50,7 @@ function Advanceservice() {
                                                 </svg>
                                                 <h5 className="card-title">{elm.title}</h5>
                                                 <p className="card-text mb-3">{elm.content}</p>
-                                                <a href="#" className="a-hover">{elm.link}</a>
+                                                <Link to="#" className="a-hover">{elm.link}</Link>
                                             </div>
                                         </div>
                                     </div>

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Pricing = () => {
     return (
@@ -24,7 +25,7 @@ const Pricing = () => {
                                 <p className='mb-3'>Unlimited Website</p>
                                 <p className='mb-3'>Weekly Reports</p>
                                 <p className='mb-5'>7/24 Support</p>
-                                <a className="btn btn-text-white green-btn-color m-0 pricing-btn" href="/">Choose Plan</a>
+                                <Link className="btn btn-text-white green-btn-color m-0 pricing-btn" to="/">Choose Plan</Link>
                             </div>
                         </div>
                     </div>
@@ -40,7 +41,7 @@ const Pricing = () => {
                                 <p className='mb-3'>Unlimited Website</p>
                                 <p className='mb-3'>Weekly Reports</p>
                                 <p className='mb-5'>7/24 Support</p>
-                                <a className="btn btn-text-white purple-btn-color m-0 pricing-btn" href="/">Choose Plan</a>
+                                <Link className="btn btn-text-white purple-btn-color m-0 pricing-btn" to="/">Choose Plan</Link>
                             </div>
                         </div>
                     </div>
@@ -56,7 +57,7 @@ const Pricing = () => {
                                 <p className='mb-3'>Unlimited Website</p>
                                 <p className='mb-3'>Weekly Reports</p>
                                 <p className='mb-5'>7/24 Support</p>
-                                <a className="btn btn-text-white green-btn-color m-0 pricing-btn" href="/">Choose Plan</a>
+                                <Link className="btn btn-text-white green-btn-color m-0 pricing-btn" to="/">Choose Plan</Link>
                             </div>
                         </div>
                     </div>

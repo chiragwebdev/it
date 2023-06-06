@@ -3,6 +3,7 @@ import serach from '../../images/search.png'
 import marketing from '../../images/marketing.png'
 import social from '../../images/social.png'
 import web from '../../images/web.png'
+import { Link } from 'react-router-dom'
 
 function ServiceSec2() {
   return (
@@ -20,7 +21,7 @@ function ServiceSec2() {
                               <img src={serach} alt="serach" className='img-width mb-3' />
                               <h5 className="card-title mb-3">SEO Services</h5>
                               <p className="card-text mb-4">Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus cras justo.</p>
-                              <div className='d-inline-flex page-btn-hover'><a href="#" className="more-btn card-link">Learn More</a></div>
+                              <div className='d-inline-flex page-btn-hover'><Link to="#" className="more-btn card-link">Learn More</Link></div>
                           </div>
                       </div>
                   </div>
@@ -30,7 +31,7 @@ function ServiceSec2() {
                               <img src={web} alt="web" className='img-width mb-3' />
                               <h5 className="card-title mb-3">Web Design</h5>
                               <p className="card-text mb-4">Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus cras justo.</p>
-                              <div className='d-inline-flex page-btn-hover'><a href="#" className="more-btn card-link">Learn More</a></div>
+                              <div className='d-inline-flex page-btn-hover'><Link to="#" className="more-btn card-link">Learn More</Link></div>
                           </div>
                       </div>
                   </div>
@@ -40,7 +41,7 @@ function ServiceSec2() {
                               <img src={social} alt="social" className='img-width mb-3' />
                               <h5 className="card-title mb-3">Social Engagement</h5>
                               <p className="card-text mb-4">Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus cras justo.</p>
-                              <div className='d-inline-flex page-btn-hover'><a href="#" className="more-btn card-link">Learn More</a></div>
+                              <div className='d-inline-flex page-btn-hover'><Link to="#" className="more-btn card-link">Learn More</Link></div>
                           </div>
                       </div>
                   </div>
@@ -50,7 +51,7 @@ function ServiceSec2() {
                               <img src={marketing} alt="marketing" className='img-width mb-3' />
                               <h5 className="card-title mb-3">Content Marketing</h5>
                               <p className="card-text mb-4">Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus cras justo.</p>
-                              <div className='d-inline-flex page-btn-hover'><a href="#" className="more-btn card-link">Learn More</a></div>
+                              <div className='d-inline-flex page-btn-hover'><Link to="#" className="more-btn card-link">Learn More</Link></div>
                           </div>
                       </div>
                   </div>
