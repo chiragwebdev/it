@@ -11,7 +11,7 @@ function Signin() {
   const navigate = useNavigate()
   const dispatch = useDispatch()
   const { typeinput } = useSelector((state) => state.menuslice)
-  const [passworderror, setePassworderror] = useState("")
+  // const [passworderror, setePassworderror] = useState("")
   const [formdata, setFormdata] = useState({
     email: "",
     password: "",
@@ -51,7 +51,7 @@ function Signin() {
                     <BiHide onClick={() => dispatch(hideshowicon())} className='cursor-point' /> :
                     <BiShow onClick={() => dispatch(hideshowicon())} className='cursor-point' />
                 }
-                <p className='pass-error'>{passworderror}</p>
+                {/* <p className='pass-error'>{passworderror}</p> */}
               </div>
             </div>
             <div className='btn btn-text-white purple-btn-color my-4 w-100 p-0'>

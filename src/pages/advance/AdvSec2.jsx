@@ -48,7 +48,7 @@ function AdvSec2() {
                                 <div className="col-xl-3 col-md-6 " key={index}>
                                     <div className="">
                                         <div className="card-body text-center">
-                                            <img src={cuel.img} className='adv-img mb-4'/>
+                                            <img src={cuel.img} className='adv-img mb-4' alt={cuel.index}/>
                                             <h4 className='process-title mb-3'>{cuel.title}</h4>
                                             <p className='process-content'>{cuel.content}</p>
                                         </div>
