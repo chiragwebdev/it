@@ -50,8 +50,8 @@ function App() {
             }
           </div>
           <Routes data-scrollbar>
-            <Route exact path="growyourbusiness.netlify.app/signin" element={<Signin />} />
-            <Route exact path="growyourbusiness.netlify.app/register" element={<Register />} />
+            <Route exact path="/signin" element={<Signin />} />
+            <Route exact path="/register" element={<Register />} />
             <Route exact path="*" element={<Main />} />
            
           </Routes>
