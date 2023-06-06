@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes, } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, } from 'react-router-dom';
 import './App.css';
 import Navabr from './component/navbar/Navabr';
 import Register from './component/Register';
@@ -33,7 +33,7 @@ function App() {
 
 
   return (
-    <BrowserRouter basename='/'>
+    <Router basename='/'>
       {/* <div id='stater'></div> */}
       {isLoading ? (
         <>
@@ -57,7 +57,7 @@ function App() {
           </Routes>
         </>
       }
-    </BrowserRouter>
+    </Router>
   );
 }
 
