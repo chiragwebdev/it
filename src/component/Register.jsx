@@ -85,7 +85,7 @@ function Register() {
                         <input type="submit" value="Register" className='submit-btn'/>
                     </div>
                 </form>
-                <p className='text-center'>Already have an account? <Link to="/signin" className='signin-a-hover'>Sign in</Link></p>
+                <p className='text-center'>Already have an account? <Link to="growyourbusiness.netlify.app/signin" className='signin-a-hover'>Sign in</Link></p>
                 <div className="divider-icon my-4">or</div>
                 <ul className='social-row'>
                     <li className=''>

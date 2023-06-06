@@ -9,10 +9,10 @@ function Main() {
     return (
         <>
             <Routes data-scrollbar>
-                <Route path="/" element={<Hero />} />
-                <Route path="/advance" element={<Advance />} />
-                <Route path="/service" element={<Service />} />
-                <Route path="*" element={<Navigate to="/" />} />
+                <Route path="growyourbusiness.netlify.app" element={<Hero />} />
+                <Route path="growyourbusiness.netlify.app/advance" element={<Advance />} />
+                <Route path="growyourbusiness.netlify.app/service" element={<Service />} />
+                <Route path="*" element={<Navigate to="growyourbusiness.netlify.app" />} />
             </Routes>
             <Footer />
         </>

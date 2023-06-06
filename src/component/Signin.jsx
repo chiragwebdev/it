@@ -58,8 +58,8 @@ function Signin() {
               <input type="submit" value="Sing in" className='submit-btn' />
             </div>
           </form>
-          <p className='text-center mb-2'><Link to="/signin" className='signin-a-hover'>Forgot Password?</Link></p>
-          <p className='text-center'>Don't have an account? <Link to="/signin" className='signin-a-hover'>Sign Up</Link></p>
+          <p className='text-center mb-2'><Link to="growyourbusiness.netlify.app/signin" className='signin-a-hover'>Forgot Password?</Link></p>
+          <p className='text-center'>Don't have an account? <Link to="growyourbusiness.netlify.app/signin" className='signin-a-hover'>Sign Up</Link></p>
           <div className="divider-icon my-4">or</div>
           <ul className='social-row'>
             <li className=''>
